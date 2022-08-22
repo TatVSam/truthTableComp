@@ -276,7 +276,37 @@
       </tbody>
    </table>
 
+   <h3><strong>Выводы о сравнении в PHP</h3>
+
+   <ol>
+      <li>При гибком сравнении в <em>PHP</em> происходит преобразование типов:
+      <ol>
+         <li>При сравнении строк, содержащих числа, или при сравнении строки с числом оператор <span class="monospace">==</span> пытается преобразовать строки в числа, поэтому равенство <span class="monospace">"1" == 1</span> верно.</li>
+         <li>При сравнении <span class="monospace"><strong>null</strong></span> и <span class="monospace"><strong>string</strong></span> 
+         <span class="monospace"><strong>null</strong></span> преобразуется в пустую строку.</li>
+         <li>При сравнении <span class="monospace"><strong>bool</strong></span> или <span class="monospace"><strong>null</strong></span> с другими типами 
+         (кроме <span class="monospace"><strong>string</strong></span> для <span class="monospace"><strong>null</strong></span>) происходит преобразование второго операнда в тип 
+         <span class="monospace"><strong>bool</strong></span>. 
+            При этом в <span class="monospace"><strong>false</strong></span> переводятся <em>пустая строка</em>, <span class="monospace"><strong>null</strong></span>, 
+            <span class="monospace"><strong>0</strong></span> и <span class="monospace"><strong>"0"</strong></span>.
+            Всё, что не <span class="monospace"><strong>false</strong></span>, становится <span class="monospace"><strong>true</strong></span>, поэтому равенства <span class="monospace">true == -1</span>
+            и <span class="monospace">true == "php"</span> верны.</li>
+      </ol>
+      </li>
+      <li>При жёстком сравнении оба операнда равны тогда и только тогда, когда их типы совпадают, а значения равны.</li>
+   </ol>
+ 
 <style>
+
+ol li{
+   font: normal 16px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   margin-top: 10px;
+   
+}
+
+.monospace {
+   font-family: monospace;
+}
 
 table {
    width: 100%;
@@ -284,13 +314,6 @@ table {
    border-collapse: collapse;
    font-size: 16px;
    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-/*table-layout: auto;
-display: table;*/
-
-/*box-sizing: border-box;*/
-/*text-indent: initial;*/
-/*border-spacing: 2px;*/
-/*border-color: gray;*/
 }
 
 table td {
@@ -300,13 +323,10 @@ table td {
    
 }
 
-thead th {  
-   background: #eee;
-   font-weight: bold;
-}
 
 table th {
-  
+    background: #eee;
+    font-weight: bold;
     padding: 15px 20px;
     text-align: center;
     margin: 20px 0;

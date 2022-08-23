@@ -283,9 +283,9 @@
       <ol>
          <li>При сравнении строк, содержащих числа, или при сравнении строки с числом оператор <span class="monospace">==</span> пытается преобразовать строки в числа, поэтому равенство <span class="monospace">"1" == 1</span> верно.</li>
          <li>При сравнении <span class="monospace"><strong>null</strong></span> и <span class="monospace"><strong>string</strong></span> 
-         <span class="monospace"><strong>null</strong></span> преобразуется в пустую строку.</li>
+         <span class="monospace"><strong>null</strong></span> преобразуется в <em>пустую строку</em>.</li>
          <li>При сравнении <span class="monospace"><strong>bool</strong></span> или <span class="monospace"><strong>null</strong></span> с другими типами 
-         (кроме <span class="monospace"><strong>string</strong></span> для <span class="monospace"><strong>null</strong></span>) происходит преобразование второго операнда в тип 
+         (кроме сравнения <span class="monospace"><strong>string</strong></span> и <span class="monospace"><strong>null</strong></span>) происходит преобразование в тип 
          <span class="monospace"><strong>bool</strong></span>. 
             При этом в <span class="monospace"><strong>false</strong></span> переводятся <em>пустая строка</em>, <span class="monospace"><strong>null</strong></span>, 
             <span class="monospace"><strong>0</strong></span> и <span class="monospace"><strong>"0"</strong></span>.
@@ -293,7 +293,7 @@
             и <span class="monospace">true == "php"</span> верны.</li>
       </ol>
       </li>
-      <li>При жёстком сравнении оба операнда равны тогда и только тогда, когда их типы совпадают, а значения равны.</li>
+      <li>При жёстком сравнении два операнда равны тогда и только тогда, когда их типы совпадают, а значения равны.</li>
    </ol>
  
 <style>

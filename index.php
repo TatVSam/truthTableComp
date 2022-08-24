@@ -10,6 +10,11 @@
 
 <body>
    
+<?php
+   function boolToStr(bool $value) {
+      return ($value) ? 'true' : 'false';
+}
+?>
    <h3><strong>Задание 1.&nbsp;</strong>Таблица истинности PHP</h3>
    
    <table style="table-layout: fixed; width: 900px; margin: auto;">
@@ -27,34 +32,34 @@
          <tr>
             <td><?php $a = 0; echo $a; ?></td>
             <td><?php $b = 0; echo $b; ?></td>
-            <td><?php echo ! $a; ?></td>
-            <td><?php echo $a || $b; ?></td>
-            <td><?php echo $a && $b; ?></td>
-            <td><?php echo $a xor $b; ?></td>
+            <td><?php echo boolToStr(! $a); ?></td>
+            <td><?php echo boolToStr($a || $b); ?></td>
+            <td><?php echo boolToStr($a && $b); ?></td>
+            <td><?php echo boolToStr($a xor $b); ?></td>
          </tr>
          <tr>
             <td><?php $a = 0; echo $a; ?></td>
             <td><?php $b = 1; echo $b; ?></td>
-            <td><?php echo ! $a; ?></td>
-            <td><?php echo $a || $b; ?></td>
-            <td><?php echo $a && $b; ?></td>
-            <td><?php echo $a xor $b; ?></td>
+            <td><?php echo boolToStr(! $a); ?></td>
+            <td><?php echo boolToStr($a || $b); ?></td>
+            <td><?php echo boolToStr($a && $b); ?></td>
+            <td><?php echo boolToStr($a xor $b); ?></td>
          </tr>
          <tr>
             <td><?php $a = 1; echo $a; ?></td>
             <td><?php $b = 0; echo $b; ?></td>
-            <td><?php echo ! $a; ?></td>
-            <td><?php echo $a || $b; ?></td>
-            <td><?php echo $a && $b; ?></td>
-            <td><?php echo $a xor $b; ?></td>
+            <td><?php echo boolToStr(! $a); ?></td>
+            <td><?php echo boolToStr($a || $b); ?></td>
+            <td><?php echo boolToStr($a && $b); ?></td>
+            <td><?php echo boolToStr($a xor $b); ?></td>
          </tr>
          <tr>
             <td><?php $a = 1; echo $a; ?></td>
             <td><?php $b = 1; echo $b; ?></td>
-            <td><?php echo ! $a; ?></td>
-            <td><?php echo $a || $b; ?></td>
-            <td><?php echo $a && $b; ?></td>
-            <td><?php echo $a xor $b; ?></td>
+            <td><?php echo boolToStr(! $a); ?></td>
+            <td><?php echo boolToStr($a || $b); ?></td>
+            <td><?php echo boolToStr($a && $b); ?></td>
+            <td><?php echo boolToStr($a xor $b); ?></td>
          </tr>
       </tbody>
    </table>
@@ -78,91 +83,91 @@
       <tbody>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>true</strong></td>
-            <td><?php $a = true; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = true; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>false</strong></td>
-            <td><?php $a = false; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = false; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>1</strong></td>
-            <td><?php $a = 1; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = 1; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>0</strong></td>
-            <td><?php $a = 0; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = 0; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>-1</strong></td>
-            <td><?php $a = -1; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = -1; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>"1"</strong></td>
-            <td><?php $a = "1"; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = "1"; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>null</strong></td>
-            <td><?php $a = null; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = null; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
          <tr>
             <td style="font-size: 16px; white-space: nowrap; background-color: #f5f5f5;"><strong>"php"</strong></td>
-            <td><?php $a = "php"; $b = true; echo $a == $b; ?></td>
-            <td><?php $b = false; echo $a == $b; ?></td>
-            <td><?php $b = 1; echo $a == $b; ?></td>
-            <td><?php $b = 0; echo $a == $b; ?></td>
-            <td><?php $b = -1; echo $a == $b; ?></td>
-            <td><?php $b = "1"; echo $a == $b; ?></td>
-            <td><?php $b = null; echo $a == $b; ?></td>
-            <td><?php $b = "php"; echo $a == $b; ?></td>
+            <td><?php $a = "php"; $b = true; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a == $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a == $b); ?></td>
          </tr>
       </tbody>
    </table>
@@ -187,91 +192,91 @@
       <tbody>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>true</strong></td>
-            <td><?php $a = true; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = true; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>false</strong></td>
-            <td><?php $a = false; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = false; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>1</strong></td>
-            <td><?php $a = 1; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = 1; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>0</strong></td>
-            <td><?php $a = 0; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = 0; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>-1</strong></td>
-            <td><?php $a = -1; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = -1; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>"1"</strong></td>
-            <td><?php $a = "1"; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = "1"; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="background-color: #f5f5f5;"><strong>null</strong></td>
-            <td><?php $a = null; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = null; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
          <tr>
             <td style="font-size: 16px; white-space: nowrap; background-color: #f5f5f5;"><strong>"php"</strong></td>
-            <td><?php $a = "php"; $b = true; echo $a === $b; ?></td>
-            <td><?php $b = false; echo $a === $b; ?></td>
-            <td><?php $b = 1; echo $a === $b; ?></td>
-            <td><?php $b = 0; echo $a === $b; ?></td>
-            <td><?php $b = -1; echo $a === $b; ?></td>
-            <td><?php $b = "1"; echo $a === $b; ?></td>
-            <td><?php $b = null; echo $a === $b; ?></td>
-            <td><?php $b = "php"; echo $a === $b; ?></td>
+            <td><?php $a = "php"; $b = true; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = false; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = 0; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = -1; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "1"; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = null; echo boolToStr($a === $b); ?></td>
+            <td><?php $b = "php"; echo boolToStr($a === $b); ?></td>
          </tr>
       </tbody>
    </table>
